@@ -19,14 +19,14 @@ class Controller
 
     private function init()
     {
-        $this->reg->setProp('renat', $_SERVER);
+        $this->reg->setProp('renat', file_get_contents('php://input'));
     }
 
     private function handleRequest()
     {
         echo "handle: \n";
         //print_r($this->reg->getProp('renat'));
-        print_r(file_get_contents('php://input'));
+        print_r($this->reg->getProp('renat'));
     }
 
 }

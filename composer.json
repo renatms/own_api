@@ -1,0 +1,16 @@
+{
+    "name": "renms/front_controller",
+    "description": "front controller",
+    "autoload": {
+        "psr-4": {
+            "Renms\\FrontController\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "renms",
+            "email": "renms80r@gmail.com"
+        }
+    ],
+    "require": {}
+}

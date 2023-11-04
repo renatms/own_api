@@ -12,5 +12,13 @@
             "email": "renms80r@gmail.com"
         }
     ],
-    "require": {}
+    "config": {
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "require": {
+        "ext-mysqli": "*",
+        "ext-json": "*"
+    }
 }

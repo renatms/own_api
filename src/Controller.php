@@ -19,14 +19,17 @@ class Controller
 
     private function init()
     {
-        $this->reg->setProp('renat', file_get_contents('php://input'));
+        $this->reg->setProp('mysql', ConfigDB::getDatabase());
+        $this->reg->setProp('activeRecords', ActiveRecords::createActiveRecords());
+        $this->reg->setProp('json', file_get_contents('php://input'));
     }
 
     private function handleRequest()
     {
-        echo "handle: \n";
-        //print_r($this->reg->getProp('renat'));
-        print_r($this->reg->getProp('renat'));
+        print_r(User::getUserList());
+
+        $this->reg->getProp('mysql')->close();
+
     }
 
 }

@@ -26,7 +26,7 @@ class Controller
 
     private function handleRequest()
     {
-        print_r(User::getUserList());
+        echo User::getUserList();
 
         $this->reg->getProp('mysql')->close();
 

@@ -22,6 +22,7 @@ class Controller
         $this->reg->setProp('mysql', ConfigDB::getDatabase());
         $this->reg->setProp('activeRecords', ActiveRecords::createActiveRecords());
         $this->reg->setProp('json', file_get_contents('php://input'));
+
     }
 
     private function handleRequest()
